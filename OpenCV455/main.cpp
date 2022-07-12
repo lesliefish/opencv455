@@ -1,13 +1,13 @@
-﻿#include <opencv2/opencv.hpp>
-#include <iostream>
+﻿#include <iostream>
+#include <filesystem> // C++17
+#include "src/tutorialsDemo/2_1_ImageSimaple.h"
 
-using namespace cv;
+using namespace std;
 int main(int argc, char** argv)
 {
-    Mat src = imread("1.jpg");
-    namedWindow("test", WINDOW_NORMAL);
-    imshow("test", src);
-    waitKey(0);
-    destroyAllWindows();
+    imagesimple::ImageSimple is;
+    auto curDir = filesystem::current_path().string();
+    is.showImage(curDir + "\\images\\1.jpg", 3000); // 文件路径
+    is.writeImage(curDir + "\\images\\1.jpg", curDir + "\\images\\1_new.jpg"); // 文件路径
     return 0;
 }
