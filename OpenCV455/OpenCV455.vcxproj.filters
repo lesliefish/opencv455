@@ -25,5 +25,8 @@
     <ClInclude Include="src\tutorialsDemo\2_1_ImageSimaple.h">
       <Filter>code\src\tutorialsDemo</Filter>
     </ClInclude>
+    <ClInclude Include="src\tutorialsDemo\2_2_VideoSimple.h">
+      <Filter>code\src\tutorialsDemo</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
